@@ -2,10 +2,13 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dc599596_002Dae81_002D42b9_002D9db2_002D4bd701fe5287/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="authorization" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.AuthorizationTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::NoteCreatingTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=cdlogin/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=elbk/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=gxme/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=newvault/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=rbtn/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=sagadeev/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Wepob/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

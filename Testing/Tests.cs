@@ -1,7 +1,4 @@
-using System.Collections.Generic;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
 
 namespace Testing
 {
@@ -12,6 +9,14 @@ namespace Testing
     public void Authorization() {
       OpenSite();
       Login();
+    }
+
+    [Test]
+    public void NoteCreating()
+    {
+      OpenSite();
+      Login();
+      CreateNote();
     }
   }
 }
