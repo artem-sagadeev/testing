@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using Testing.Entities;
 
 namespace Testing
@@ -40,17 +43,24 @@ namespace Testing
             _driver.FindElement(By.CssSelector(".css-79elbk .css-1qv22w3")).Click();
             _driver.FindElement(By.CssSelector(".css-79elbk .css-1qv22w3")).SendKeys(_credentials.Password);
             _driver.FindElement(By.CssSelector(".css-7y6612")).Click();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            var frame = _driver.FindElement(By.CssSelector("#newvault"));
+            _driver.SwitchTo().Frame(frame);
         }
 
         protected void CreateNote()
         {
-            _driver.SwitchTo().Frame(0);
+            var newNote = new SecureNote() {Name = "New note", Text = "Content of the note"};
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
+            wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#addMenuButtonCustom")));
+            _js.ExecuteScript("document.getElementById('addMenuButtonDefault').style.display='none';" +
+                              "document.getElementById('addMenuButtonCustom').style.display='block';");
             _driver.FindElement(By.CssSelector("#addMenuButtonCustom .focusable-add-menu-item")).Click();
             _driver.FindElement(By.CssSelector(".SecureNote")).Click();
             _driver.FindElement(By.CssSelector("div:nth-child(1) > div > .dialogInput")).Click();
-            _driver.FindElement(By.CssSelector("div:nth-child(1) > div > .dialogInput")).SendKeys("New note");
+            _driver.FindElement(By.CssSelector("div:nth-child(1) > div > .dialogInput")).SendKeys(newNote.Name);
             _driver.FindElement(By.CssSelector("td > .dialogInput")).Click();
-            _driver.FindElement(By.CssSelector("td > .dialogInput")).SendKeys("Content of the note");
+            _driver.FindElement(By.CssSelector("td > .dialogInput")).SendKeys(newNote.Text);
             _driver.FindElement(By.CssSelector(".rbtn:nth-child(3)")).Click();
         }
     }

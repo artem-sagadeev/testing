@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace Testing
 {
   [TestFixture]
-  public class AuthorizationTest : TestBase
+  public class Tests : TestBase
   {
     [Test]
     public void Authorization() {
