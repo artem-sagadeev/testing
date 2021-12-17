@@ -1,4 +1,5 @@
 ﻿using System;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -29,10 +30,31 @@ namespace Testing.Helpers
 
         public void Logout()
         {
-            var wait1 = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
-            wait1.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#userMenu")));
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#userMenu")));
             _driver.FindElement(By.CssSelector("#userMenu")).Click();
             _driver.FindElement(By.Id("logoutIcon")).Click();
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+        }
+
+        public void IsAuthorised()
+        {
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#pageTitle")));
+            
+            var pageTitle = _driver.FindElement(By.Id("pageTitle")).GetAttribute("innerHTML");
+            var tagName = _driver.FindElement(By.Id("pageTitle")).TagName;
+            
+            Assert.AreEqual("All Items", pageTitle);
+            Assert.AreEqual("h3", tagName);
+        }
+
+        public void IsNotAuthorised()
+        {
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
+            var title = _driver.FindElement(By.TagName("title")).GetAttribute("innerHTML");
+            
+            Assert.AreEqual("#1 Password Manager & Vault App with Single-Sign On & MFA Solutions | LastPass", title);
         }
     }
 }

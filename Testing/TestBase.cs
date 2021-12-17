@@ -13,18 +13,6 @@ namespace Testing
 {
     public class TestBase
     {
-        protected ApplicationManager App;
-        
-        [SetUp]
-        public void SetUp()
-        {
-            App = new ApplicationManager();
-        }
-    
-        [TearDown]
-        protected void TearDown() 
-        {
-            App.Stop();
-        }
+        protected readonly ApplicationManager App = ApplicationManager.GetInstance();
     }
 }

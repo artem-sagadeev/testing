@@ -1,12 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dc599596_002Dae81_002D42b9_002D9db2_002D4bd701fe5287/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="authorization" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.Tests.NoteTests.NoteCreating&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.Tests.AuthorizationTests.Login&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::UpdateTest.update&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.Tests.NoteTests.Editing&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.Tests.NoteTests.Creating&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.Tests.AuthorizationTests.Logout&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D1C56FE1-F062-4D7E-82D4-5C39B7D2C9D4::net5.0::Testing.Tests.NoteTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=cdlogin/@EntryIndexedValue">True</s:Boolean>

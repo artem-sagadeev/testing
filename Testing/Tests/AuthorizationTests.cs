@@ -8,6 +8,8 @@ namespace Testing.Tests
         public void Login() {
             App.Navigation.OpenSite();
             App.Authorization.Login();
+            App.Navigation.ChangeFrame();
+            App.Authorization.IsAuthorised();
         }
         
         [Test]
@@ -16,6 +18,7 @@ namespace Testing.Tests
             App.Authorization.Login();
             App.Navigation.ChangeFrame();
             App.Authorization.Logout();
+            App.Authorization.IsNotAuthorised();
         }
     }
 }
